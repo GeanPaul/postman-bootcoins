@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "f8fd2e9b-3095-4b14-9579-8284d58f1640",
+		"name": "Peticiones",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20914076"
+	},
+	"item": [
+		{
+			"name": "Obtener todas las tasas activas de compra y venta de bootcoins",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bootcoins-api}}/rates/active",
+					"host": [
+						"{{bootcoins-api}}"
+					],
+					"path": [
+						"rates",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener los clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Envio peticion de transacccion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"6b38c350-a67c-4aca-81ac-63a5ae084ede\",\r\n    \"transactionType\": \"B\",\r\n    \"paymode\": \"YANKE\",\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\",\r\n    \"mount\": 500,\r\n    \"celular\": \"983321544\",\r\n    \"numberAccount\": \"4569863197895\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{customer-api}}//customer/transaction",
+					"host": [
+						"{{customer-api}}"
+					],
+					"path": [
+						"",
+						"customer",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "bootcoins-api",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "customer-api",
+			"value": "http://localhost:8089",
+			"type": "string"
+		}
+	]
+}

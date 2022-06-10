@@ -30,11 +30,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/users",
+					"raw": "localhost:8087/users",
 					"host": [
 						"localhost"
 					],
-					"port": "8081",
+					"port": "8087",
 					"path": [
 						"users"
 					]
@@ -57,12 +57,11 @@
 					}
 				},
 				"url": {
-					"raw": "{{customer-api}}//customer/transaction",
+					"raw": "{{customer-api}}/customer/transaction",
 					"host": [
 						"{{customer-api}}"
 					],
 					"path": [
-						"",
 						"customer",
 						"transaction"
 					]
